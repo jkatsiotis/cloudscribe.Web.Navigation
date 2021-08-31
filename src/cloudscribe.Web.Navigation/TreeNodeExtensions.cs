@@ -73,6 +73,17 @@ namespace cloudscribe.Web.Navigation
                     {
                         targetUrl = targetUrl + "/";
                     }
+                    Console.WriteLine("--------");
+                    Console.WriteLine("KEY");
+                    Console.WriteLine(n.Value.Key);
+                    Console.WriteLine("N VALUE ACTION");
+                    Console.WriteLine(n.Value.Action);
+                    Console.WriteLine("TARGET");
+                    Console.WriteLine(targetUrl);
+                    Console.WriteLine("MATCH");
+                    Console.WriteLine(urlToMatch);
+
+
                     //https://github.com/cloudscribe/cloudscribe.Web.Navigation/issues/71
                     //if (targetUrl.IndexOf(urlToMatch, StringComparison.OrdinalIgnoreCase) >= 0)
                     if (!string.IsNullOrEmpty(urlToMatch) && targetUrl.Equals(urlToMatch, StringComparison.OrdinalIgnoreCase))

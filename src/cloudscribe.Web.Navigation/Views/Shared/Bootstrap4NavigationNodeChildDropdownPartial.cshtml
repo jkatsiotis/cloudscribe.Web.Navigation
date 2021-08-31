@@ -6,16 +6,21 @@
 @inject IStringLocalizer<cloudscribe.Web.Navigation.MenuResources> sr
 @if ((Model.TempNode != null) && (await Model.HasVisibleChildren(Model.TempNode)))
 {
+
+    <h2>Bootstrap4NavigationNodeChildDropdownPartial</h2>
 <ul class="dropdown-menu" aria-labelledby="dropdown-@Model.TempNode.Value.Key">
     @foreach (var childNode in Model.TempNode.Children) {
         if (!await Model.ShouldAllowView(childNode)) { continue; }
+
+
+        <h2>@childNode.Value.CustomData</h2>
 
         if (childNode.Value.Text == "Separator") {
             <div class="dropdown-divider"></div>
             continue;
         }
         if (!await Model.HasVisibleChildren(childNode)) {
-            <li class='@Model.GetClass(childNode.Value, "")'><a class="dropdown-item" href="@Url.Content(Model.AdjustUrl(childNode))">@Html.Raw(Model.GetIcon(childNode.Value))@sr[Model.AdjustText(childNode)]</a></li>
+            <li class='@Model.GetClass(childNode.Value, "")'><a class="dropdown-item" href="@Url.Content(Model.AdjustUrl(childNode))?alienId=@childNode.Value.CustomData">@Html.Raw(Model.GetIcon(childNode.Value))@sr[Model.AdjustText(childNode)]</a></li>
         }
         else {
 

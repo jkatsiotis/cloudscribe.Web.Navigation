@@ -37,9 +37,12 @@
               <Children />
             </NavNode>
             <NavNode key="areaseparator" text="Separator"></NavNode>
-              <NavNode key="aliens" area="Area51" controller="Roswell" action="Aliens" preservedRouteParameters="culture" text="Aliens">
+              <NavNode key="aliens" area="Area51" controller="Roswell" action="Aliens" preservedRouteParameters="culture" customData="98"  text="Aliens">
                   <Children />
               </NavNode>
+            <NavNode key="moreAliens" area="Area51" controller="Roswell" action="Aliens" preservedRouteParameters="culture" customData="99" text="MoreAliens">
+              <Children />
+            </NavNode>
               <NavNode key="mib" area="Area51" controller="Roswell" action="MenInBlack" preservedRouteParameters="culture" text="Men In Black">
                   <Children />
               </NavNode>
@@ -52,6 +55,29 @@
       <Children />
     </NavNode>
 
+    <NavNode key="Orientamento" parentKey="ForumIndex" area="Area51" controller="Roswell" action="Aliens" customData="1" text="Orientamento e carriera" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+      <Children>
+        <NavNode key="OrientamentoStudi" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="2" text="Orientamento agli studi" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+        <NavNode key="OrientamentoCarriera" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="3" text="Orientamento alla carriera" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+        <NavNode key="OrientamentoBigInterview" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="4" text="Big Interview" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+        <NavNode key="OrientamentoBlogLavoro" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="5" text="Blog sul lavoro" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+        <NavNode key="OrientamentoVisualizzazioneCandidature" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="6" text="Visualizzazione candidature" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+        <NavNode key="OrientamentoInoltroCandidature" parentKey="Orientamento" area="Area51" controller="Roswell" action="Aliens" customData="7" text="Invio candidature Jobgate" iconCssClass="flaticon-line-graph" preservedRouteParameters="countryId" >
+          <Children />
+        </NavNode>
+      </Children>
+    </NavNode>
+    
       <NavNode key="HideFromAuthenticated"
              controller="Home"
              action="HideAuth"

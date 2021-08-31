@@ -6,6 +6,7 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, cloudscribe.Web.Navigation
 
+<h1>Bootstrap4TopNavWithDropdowns</h1>
 <ul class="navbar-nav mr-auto" role="menubar">
     @if (await Model.ShouldAllowView(Model.RootNode))
     {
@@ -16,6 +17,7 @@
     {
         @foreach (var node in Model.RootNode.Children)
         {
+            <h2>@node.Value.CustomData</h2>
             if (!await Model.ShouldAllowView(node)) { continue; }
             if (!await Model.HasVisibleChildren(node))
             {

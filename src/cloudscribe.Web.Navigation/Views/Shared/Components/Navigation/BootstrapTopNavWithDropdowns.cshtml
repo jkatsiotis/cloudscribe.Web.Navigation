@@ -6,6 +6,7 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, cloudscribe.Web.Navigation
 
+<h1>BootstrapTopNavWithDropdowns</h1>
 <ul class="nav navbar-nav" role="menubar">
     <li cwn-data-attributes="@Model.RootNode.Value.DataAttributes" class='@Model.GetClass(Model.RootNode.Value)'><a href="@Url.Content(Model.AdjustUrl(Model.RootNode))">@Html.Raw(Model.GetIcon(Model.RootNode.Value))@sr[Model.AdjustText(Model.RootNode)]</a></li>
     @if (await Model.HasVisibleChildren(Model.RootNode))

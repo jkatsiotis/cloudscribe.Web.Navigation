@@ -19,7 +19,8 @@ namespace NavigationDemo.Web.Areas.Area51.Controllers
             return View();
         }
 
-        public IActionResult Aliens()
+        [Route("/area51/roswell/aliens/{alienId}")]
+        public IActionResult Aliens(int alienId = 1)
         {
             return View();
         }
